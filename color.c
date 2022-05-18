@@ -6,7 +6,7 @@
 /*   By: jvelasco <jvelasco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 20:02:26 by jvelasco          #+#    #+#             */
-/*   Updated: 2022/05/18 20:14:37 by jvelasco         ###   ########.fr       */
+/*   Updated: 2022/05/18 21:14:25 by jvelasco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,15 @@ int	create_trgb(int t, int r, int g, int b)
 
 int	render_color(t_data *data, int iter)
 {
-			if (iter < 16)
-				iter = create_trgb(0, iter * 8, iter * 8, 128 + iter * 4);
-			else if (iter < 64)
-				iter = create_trgb(0, 128 + iter -16, 128 + iter - 16, 192 + iter - 16);
-            else if (iter >= 64 && iter < data->max_iter)
-				iter = create_trgb(0, data->max_iter - iter, 128 + (data->max_iter - iter) / 2, data->max_iter - iter);
-			else
-                iter = create_trgb(0,0,0,0);
-            return (iter);
+	if (iter < 16)
+		iter = create_trgb(0, iter * 8, iter * 8, 128 + iter * 4);
+	else if (iter < 64)
+		iter = create_trgb(0, 128 + iter -16, 128
+				+ iter - 16, 192 + iter - 16);
+	else if (iter >= 64 && iter < data->max_iter)
+		iter = create_trgb(0, data->max_iter - iter, 128
+				+ (data->max_iter - iter) / 2, data->max_iter - iter);
+	else
+		iter = create_trgb(0, 0, 0, 0);
+	return (iter);
 }

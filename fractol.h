@@ -6,13 +6,13 @@
 /*   By: jvelasco <jvelasco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:22:30 by jvelasco          #+#    #+#             */
-/*   Updated: 2022/05/18 20:15:35 by jvelasco         ###   ########.fr       */
+/*   Updated: 2022/05/18 21:08:24 by jvelasco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
-
+# define DATA_WAIT 100
 # include <mlx.h>
 # include "stdlib.h"
 # include "stdio.h"
@@ -44,7 +44,6 @@ typedef struct s_data {
 	double	cen_y;
 	double	angle;
 }	t_data;
-
 
 typedef struct s_fractol {
 	double	cr;

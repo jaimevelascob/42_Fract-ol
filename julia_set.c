@@ -6,7 +6,7 @@
 /*   By: jvelasco <jvelasco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:15:49 by jvelasco          #+#    #+#             */
-/*   Updated: 2022/05/18 20:19:24 by jvelasco         ###   ########.fr       */
+/*   Updated: 2022/05/18 21:18:38 by jvelasco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ void	ft_julia_fractol(t_data *data, int x, int y)
 	int			color;
 	t_fractol	fractol;
 
-    fractol.re = (x / (data->w / (data->maxreal - data->minreal))
-            + data->minreal) / (data->scale) + data->cen_x;
-    fractol.im = (y / (data->h / (data->maximg - data->minimg))
-            + data->minimg) / (data->scale) + data->cen_y;
-    fractol.cr = sin(data->angle); 
-    fractol.ci = cos(data->angle * 3.123); 
+	fractol.re = (x / (data->w / (data->maxreal - data->minreal))
+			+ data->minreal) / (data->scale) + data->cen_x;
+	fractol.im = (y / (data->h / (data->maximg - data->minimg))
+			+ data->minimg) / (data->scale) + data->cen_y;
+	fractol.cr = sin(data->angle);
+	fractol.ci = cos(data->angle * 3.123);
 	iter = 0;
 	while (iter < data->max_iter)
 	{

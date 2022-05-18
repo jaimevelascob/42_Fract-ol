@@ -6,7 +6,7 @@
 /*   By: jvelasco <jvelasco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:56:28 by jvelasco          #+#    #+#             */
-/*   Updated: 2022/05/18 20:39:36 by jvelasco         ###   ########.fr       */
+/*   Updated: 2022/05/18 21:15:09 by jvelasco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_draw_fractol(t_data *data)
 	}
 }
 
-int		wait_next_frame(t_data *data)
+int	wait_next_frame(t_data *data)
 {
 	if (data->wait == 1)
 		render_next_frame(data);
@@ -43,14 +43,12 @@ int		wait_next_frame(t_data *data)
 	return (0);
 }
 
-int render_next_frame(t_data *data)
+int	render_next_frame(t_data *data)
 {
 	ft_draw_fractol(data);
 	mlx_put_image_to_window(data->mlx, data->mlx_win, data->img, 0, 0);
-	
 	return (0);
 }
-
 
 void	ft_process_fractol(int num_fractol)
 {
