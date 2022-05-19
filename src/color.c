@@ -6,11 +6,11 @@
 /*   By: jvelasco <jvelasco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 20:02:26 by jvelasco          #+#    #+#             */
-/*   Updated: 2022/05/18 21:14:25 by jvelasco         ###   ########.fr       */
+/*   Updated: 2022/05/19 18:21:33 by jvelasco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "../inc/fractol.h"
 
 void	put_pixel(t_data *data, int x, int y, int color)
 {

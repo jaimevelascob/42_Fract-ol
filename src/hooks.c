@@ -6,11 +6,11 @@
 /*   By: jvelasco <jvelasco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 20:06:16 by jvelasco          #+#    #+#             */
-/*   Updated: 2022/05/18 21:17:20 by jvelasco         ###   ########.fr       */
+/*   Updated: 2022/05/19 18:21:53 by jvelasco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "../inc/fractol.h"
 
 int	key_hook(int keycode, t_data *data)
 {
@@ -29,7 +29,7 @@ int	key_hook(int keycode, t_data *data)
 		data->cen_y = 0;
 	}
 	else if (keycode == 78)
-		data->angle -= 0.02;
+		data->angle -= 0.1;
 	else if (keycode == 69)
 		data->angle += 0.1;
 	else if (keycode == 53)
@@ -40,7 +40,8 @@ int	key_hook(int keycode, t_data *data)
 
 int	mouse_hook(int button, int x, int y, t_data *data)
 {
-	(void)x, y;
+	(void)x;
+	(void)y;
 	if (button == 5)
 		data->scale += (data->scale * 0.1);
 	else if (button == 4)

@@ -6,13 +6,11 @@
 /*   By: jvelasco <jvelasco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:56:28 by jvelasco          #+#    #+#             */
-/*   Updated: 2022/05/18 21:15:09 by jvelasco         ###   ########.fr       */
+/*   Updated: 2022/05/19 18:37:13 by jvelasco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// todo:
-// julia parametres !
-#include "fractol.h"
+#include "../inc/fractol.h"
 
 void	ft_draw_fractol(t_data *data)
 {
@@ -75,9 +73,9 @@ int	main(__attribute((unused))int argc, char **argv)
 	}
 	else
 	{
-		if (!strcmp(argv[1], "mandelbrot"))
+		if (!ft_strncmp(argv[1], "mandelbrot", 10))
 			ft_process_fractol(1);
-		else if (!strcmp(argv[1], "julia"))
+		else if (!ft_strncmp(argv[1], "julia", 5))
 			ft_process_fractol(2);
 		else if (!strcmp(argv[1], "ship"))
 			ft_process_fractol(3);

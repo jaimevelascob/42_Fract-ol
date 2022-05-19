@@ -2,23 +2,23 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror  -Ofast -fsanitize=address
 MLX = -lmlx -framework OpenGL -framework Appkit
 
-SRC := fractol.c color.c mandel_set.c julia_set.c  hooks.c init_sets.c 
+SRC := src/fractol.c src/color.c src/mandel_set.c src/julia_set.c  src/hooks.c src/init_sets.c 
 OBJ := $(SRC:.c=.o)
 
 %.o%.c : $(SRC)
 	@echo "estamos..."
-	$(CC) $(CFLAGS) $(MLX)
+	@$(CC) $(CFLAGS) $(MLX)
 
 all: fractol
 
 fractol: $(OBJ)
 	@echo "compiling..."
-	$(CC) $(CFLAGS) $(OBJ) $(MLX)
+	@$(CC) $(CFLAGS) $(OBJ) $(MLX)
 clean:
 	@echo "cleaning..."
 	@rm -f a.out
 fclean: clean
-	@rm -f fractol.o color.o mandel_set.o julia_set.o hooks.o init_sets.o
+	@rm -f src/fractol.o src/color.o src/mandel_set.o src/julia_set.o src/hooks.o src/init_sets.o
 
 re: fclean all
 

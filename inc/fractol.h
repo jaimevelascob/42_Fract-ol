@@ -6,7 +6,7 @@
 /*   By: jvelasco <jvelasco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:22:30 by jvelasco          #+#    #+#             */
-/*   Updated: 2022/05/18 21:08:24 by jvelasco         ###   ########.fr       */
+/*   Updated: 2022/05/19 18:42:19 by jvelasco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,9 @@ typedef struct s_fractol {
 }	t_fractol;
 
 t_data	*ft_blank(t_data *data, int num_fractol);
+int		ft_strlen(const char *s);
 void	ft_init_julia(t_data *data);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	ft_init_mandel(t_data *data);
 int		create_trgb(int t, int r, int g, int b);
 void	put_pixel(t_data *data, int x, int y, int color);
