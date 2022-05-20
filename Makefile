@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror  -Ofast -flto #-fsanitize=address
-MLX = -L./minilibx_mms_20200219/ -lmlx -framework OpenGL -framework Appkit
-
+MLX_PATH = minilibx_mms_20200219/ 
+MLX = -L./$(MLX_PATH) -lmlx -framework OpenGL -framework Appkit
 SRC := src/fractol.c src/color.c src/mandel_set.c src/julia_set.c  src/hooks.c src/init_sets.c 
 OBJ := $(SRC:.c=.o)
 
@@ -13,7 +13,8 @@ all: fractol
 
 fractol: $(OBJ)
 	echo "compiling..."
-	$(CC) $(CFLAGS) $(OBJ) $(MLX) 
+	make -C $(MLX_PATH) > /dev/null 
+	$(CC) $(CFLAGS) $(OBJ) $(MLX) libmlx.dylib
 
 clean:
 	@echo "cleaning..."
