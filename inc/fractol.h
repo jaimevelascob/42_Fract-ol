@@ -6,14 +6,14 @@
 /*   By: jvelasco <jvelasco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:22:30 by jvelasco          #+#    #+#             */
-/*   Updated: 2022/05/19 18:42:19 by jvelasco         ###   ########.fr       */
+/*   Updated: 2022/05/19 19:56:48 by jvelasco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
 # define DATA_WAIT 100
-# include <mlx.h>
+# include "../minilibx_mms_20200219/mlx.h"
 # include "stdlib.h"
 # include "stdio.h"
 # include "unistd.h"

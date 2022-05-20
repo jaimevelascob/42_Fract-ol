@@ -6,7 +6,7 @@
 /*   By: jvelasco <jvelasco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 21:02:31 by jvelasco          #+#    #+#             */
-/*   Updated: 2022/05/19 18:41:57 by jvelasco         ###   ########.fr       */
+/*   Updated: 2022/05/20 18:28:15 by jvelasco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ t_data	*ft_blank(t_data *data, int num_fractol)
 	data->cen_x = .0;
 	data->cen_y = .0;
 	data->w = 900;
-	data->h = 600;
+	data->h = 900;
 	data->max_iter = 100;
 	data->scale = 1.0;
 	data->angle = 0;
