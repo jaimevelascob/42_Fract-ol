@@ -6,14 +6,14 @@
 /*   By: jvelasco <jvelasco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:22:30 by jvelasco          #+#    #+#             */
-/*   Updated: 2022/05/19 19:56:48 by jvelasco         ###   ########.fr       */
+/*   Updated: 2022/05/24 19:39:09 by jvelasco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
 # define DATA_WAIT 100
-# include "../minilibx_mms_20200219/mlx.h"
+# include "mlx.h"
 # include "stdlib.h"
 # include "stdio.h"
 # include "unistd.h"
@@ -61,6 +61,7 @@ int		create_trgb(int t, int r, int g, int b);
 void	put_pixel(t_data *data, int x, int y, int color);
 int		mandel_fractol(t_data *data);
 int		julia_fractol(t_data *data);
+int		newset(t_data *data);
 int		ship_fractol(t_data *data);
 int		render_color(t_data *data, int iter);
 void	ft_check_argv(char **argv);

@@ -6,7 +6,7 @@
 /*   By: jvelasco <jvelasco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:56:28 by jvelasco          #+#    #+#             */
-/*   Updated: 2022/05/20 18:28:21 by jvelasco         ###   ########.fr       */
+/*   Updated: 2022/05/24 19:48:32 by jvelasco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ void	ft_draw_fractol(t_data *data)
 	{
 		ft_init_julia(data);
 		julia_fractol(data);
+	}
+	if (data->fractol_val == 3)
+	{
+		ft_init_mandel(data);
+		newset(data);
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: jvelasco <jvelasco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 20:06:16 by jvelasco          #+#    #+#             */
-/*   Updated: 2022/05/20 19:20:05 by jvelasco         ###   ########.fr       */
+/*   Updated: 2022/05/24 19:48:04 by jvelasco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	mouse_hook(int button, int x, int y, t_data *data)
 	{
 		data->scale += data->scale * 0.1;
 		data->cen_x += ((float)(x - data->w / 2) / data->w) / 4 / data->scale;
-		data->cen_y += -((float)(y - data->h / 2) / data->h) / 4 / data->scale;
+		data->cen_y += ((float)(y - data->h / 2) / data->h) / 4 / data->scale;
 	}
 	else if (button == 4)
 		data->scale -= data->scale * 0.1;

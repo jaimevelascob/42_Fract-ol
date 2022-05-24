@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mandel_set.c                                       :+:      :+:    :+:   */
+/*   newset.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvelasco <jvelasco@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jvelasco <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/18 18:15:49 by jvelasco          #+#    #+#             */
-/*   Updated: 2022/05/24 17:55:04 by jvelasco         ###   ########.fr       */
+/*   Created: 2022/05/24 17:55:38 by jvelasco          #+#    #+#             */
+/*   Updated: 2022/05/24 19:22:09 by jvelasco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/fractol.h"
 
-void	ft_mandel_fractol(t_data *data, int x, int y)
+void	ft_newset(t_data *data, int x, int y)
 {
 	int			iter;
 	double		tr;
@@ -29,7 +29,7 @@ void	ft_mandel_fractol(t_data *data, int x, int y)
 	while (iter < data->max_iter)
 	{
 		tr = fractol.re * fractol.re - fractol.im * fractol.im + fractol.cr;
-		fractol.im = 2.0 * fractol.re * fractol.im + fractol.ci;
+		fractol.im = 2 * fabs(fractol.re * fractol.im) + fractol.ci;
 		fractol.re = tr;
 		if (fractol.re * fractol.re + fractol.im * fractol.im > 4)
 			break ;
@@ -39,7 +39,7 @@ void	ft_mandel_fractol(t_data *data, int x, int y)
 	put_pixel(data, x, y, color);
 }
 
-int	mandel_fractol(t_data *data)
+int	newset(t_data *data)
 {
 	int	x;
 	int	y;
@@ -50,7 +50,7 @@ int	mandel_fractol(t_data *data)
 	{
 		y = 0;
 		while (y < data->h)
-			ft_mandel_fractol(data, x, y++);
+			ft_newset(data, x, y++);
 		x++;
 	}
 	return (1);
