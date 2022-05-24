@@ -6,7 +6,7 @@
 /*   By: jvelasco <jvelasco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 18:22:30 by jvelasco          #+#    #+#             */
-/*   Updated: 2022/05/24 19:39:09 by jvelasco         ###   ########.fr       */
+/*   Updated: 2022/05/24 20:03:54 by jvelasco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include "stdio.h"
 # include "unistd.h"
 # include "math.h"
-# include "string.h"
 
 typedef struct s_data {
 	int		wait;

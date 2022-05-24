@@ -6,7 +6,7 @@
 /*   By: jvelasco <jvelasco@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:56:28 by jvelasco          #+#    #+#             */
-/*   Updated: 2022/05/24 19:48:32 by jvelasco         ###   ########.fr       */
+/*   Updated: 2022/05/24 20:03:57 by jvelasco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int	main(__attribute((unused))int argc, char **argv)
 			ft_process_fractol(1);
 		else if (!ft_strncmp(argv[1], "julia", 5))
 			ft_process_fractol(2);
-		else if (!strcmp(argv[1], "ship"))
+		else if (!ft_strncmp(argv[1], "ship", 4))
 			ft_process_fractol(3);
 		else
 		{
