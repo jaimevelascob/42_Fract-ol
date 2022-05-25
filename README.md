@@ -3,27 +3,27 @@
 # Summary
 Fractol is a 42 Project aimed at exploring fractals; mathematical sets that exhibit a repeating pattern unlimited displayed at every scale.
 
-#Keys
+# Keys
 * mouse wheel zooms in and out, almost infinitely (within the limits of the computer).
 * moving fractals with the arrows.
-* Pressing *asterisk* increase max iteraction and *division* decrease it.
-* *+* and *-* increase or decrease a variable to iteract and perform differents julia's sets.
+* Pressing **asterisk** increase max iteraction and **division** decrease it.
+* **+** and **-** increase or decrease a variable to iteract and perform differents julia's sets.
 # Steps:
 
 1. Make:
 ![](/img/make.png?raw=true "shot1")
-	See fractols avaliables:
+	See fractols avaliables executing the file generated "fractol":
 ![](/img/fractol.png?raw=true "shot1")
-2. Exect ./fractol with the parametre that u want to seee: <br />
+2. Exect ./fractol with the parametre that u want to see: <br />
 
-#Mandelbrot:
+# Mandelbrot:
 ![](/img/mandel1.png?raw=true "shot1")
 ![](/img/mandel2.png?raw=true "shot1")
 
-#julia:
+# julia:
 ![](/img/julia1.png?raw=true "shot1")
 ![](/img/julia2.png?raw=true "shot1")
 
-#ship:
+# ship:
 ![](/img/ship1.png?raw=true "shot1")
 ![](/img/ship2.png?raw=true "shot1")
